@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply font-sans text-neutral-800 antialiased;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-semibold tracking-tight;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 rounded-full bg-primary px-8 py-4 text-sm font-semibold text-white transition-all duration-300 hover:bg-primary-dark hover:shadow-lg hover:shadow-primary/30 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2;
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center justify-center gap-2 rounded-full border-2 border-primary px-8 py-4 text-sm font-semibold text-primary transition-all duration-300 hover:bg-primary hover:text-white focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2;
+  }
+
+  .btn-wood {
+    @apply inline-flex items-center justify-center gap-2 rounded-full bg-wood px-8 py-4 text-sm font-semibold text-white transition-all duration-300 hover:bg-wood-dark hover:shadow-lg hover:shadow-wood/30 focus:outline-none focus:ring-2 focus:ring-wood focus:ring-offset-2;
+  }
+
+  .card-hover {
+    @apply transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl;
+  }
+
+  .section-padding {
+    @apply px-4 py-20 sm:px-6 lg:px-8 xl:px-12 2xl:px-20;
+  }
+
+  .container-custom {
+    @apply mx-auto max-w-7xl;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .gradient-primary {
+    background: linear-gradient(135deg, #184D3B 0%, #1E634D 100%);
+  }
+
+  .gradient-wood {
+    background: linear-gradient(135deg, #B77A44 0%, #D49A5F 100%);
+  }
+}
